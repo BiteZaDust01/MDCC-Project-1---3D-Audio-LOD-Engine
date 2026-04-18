@@ -10,7 +10,7 @@ This project demonstrates a real-time Level of Detail (LOD) audio engine built i
 It features a live interactive 3D environment where users can walk between different audio sources (a Radio and an RV) to experience real-time FFT bin destruction, latency tracking, and dynamic bitrate adjustments.
 
 ## Environment & Requirements
-* **Game Engine:** Unity 2022.3.62f3 (Required for exact API and package compatibility)
+* **Environment/Engine:** Unity 2022.3.62f3 (Required for exact API and package compatibility)
 * **C++ Compiler:** MSVC (Visual Studio 2022 Build Tools)
 * **Target Platforms:** Windows 10/11 (x64)
 
@@ -42,6 +42,8 @@ Open your terminal or command prompt and run:
 * **E:** Interact with objects (Power on Radio / Trigger RV Engine).
 * **SPACE:** Toggle A/B testing (Compressed LOD vs. Original Raw Audio).
 * **TAB:** Open/Close the Real-time Metrics Window (displays Latency, Compression Ratio, SNR, and Destroyed Bins).
+
+## **Dataset**: The project utilizes two embedded audio samples located in Assets/Audio_sources: A dynamic multi-frequency music track (Radio_sound.wav) and a dense, noisy mechanical effect (car_sound.wav).
 
 ## Code Architecture (Separation of Concerns)
 * `AudioEngineCore.cs`: Static C# wrapper bridging the Unity environment with the unmanaged C++ DLL. Calculates SNR and handles data arrays.
