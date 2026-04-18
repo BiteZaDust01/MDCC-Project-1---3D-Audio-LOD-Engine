@@ -79,6 +79,18 @@ public class RadioLODController : MonoBehaviour
             }
         }
 
+        // Press 'P' to export whatever audio the Radio is currently playing
+        if (Input.GetKeyDown(KeyCode.P) && audioSource != null && audioSource.clip != null)
+        {
+            float distance = Vector3.Distance(playerTransform.position, transform.position);
+
+            // Just pass the base name; your AudioEngineCore will add the index and .wav!
+            string baseName = $"Radio_Export_{distance:F0}m";
+
+            // Call YOUR upgraded exporter, passing the actual AudioClip
+            AudioEngineCore.ExportToWav(baseName, audioSource.clip, sampleRate);
+        }
+
         // --- Auto LOD Stepping ---
         if (isShowingCompressed && Mathf.Abs(currentDistance - lastProcessedDistance) >= lodStepDistance)
         {

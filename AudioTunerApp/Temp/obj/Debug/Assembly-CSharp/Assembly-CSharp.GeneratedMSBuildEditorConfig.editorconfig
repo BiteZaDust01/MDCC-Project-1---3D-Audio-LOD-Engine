@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = 
-build_property.ProjectDir = F:\MDCC\MDCC-Project-1---Audio-Compression-Tuner\AudioTunerApp\
+build_property.ProjectDir = F:\MDCC\MDCC-Project-1---3D-Audio-LOD-Engine\AudioTunerApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false
